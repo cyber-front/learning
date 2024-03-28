@@ -1,0 +1,10 @@
+pipeline {
+  agent { docker { image 'tuxmake/gcc-12:20240323' } }
+  stages {
+    stage('Review elements') {
+      steps {
+        sh 'g++ --version && cmake --version && make --version'
+      }
+    }
+  }
+}
