@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Review elements') {
       steps {
-        podman run quay.io/podman/hello:latest
+        sh "whoami"
+        sh "podman run quay.io/podman/hello:latest"
       }
     }
   }
