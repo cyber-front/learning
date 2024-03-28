@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Review elements') {
       steps {
-        podman run docker pull tuxmake/gcc-12:20240323 "gcc --version"
+        podman run hello-world:latest
       }
     }
   }
