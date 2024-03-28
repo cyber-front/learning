@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Review elements') {
       steps {
-        podman run hello-world:latest
+        podman run quay.io/podman/hello:latest
       }
     }
   }
