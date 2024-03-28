@@ -10,5 +10,18 @@ pipeline {
         sh "podman run quay.io/podman/hello:latest"
       }
     }
+    stage('Build basic_array') {
+      steps {
+        dir('basic_array') {
+          sh """
+            mkdir -p build
+            cd build
+            cmake ..
+            make
+            ./array
+          """
+        }
+      }
+    }
   }
 }
